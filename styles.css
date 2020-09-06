@@ -1,0 +1,49 @@
+:root {
+    --default: #e04949;
+    --blue: #2d84fb;
+    --lightGreen: #67c56e;
+    --yellow: #f89d36;
+    --purple: #662e9b;
+    --black: #555a64;
+    --backgroundColor: #f9fafd;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5rem;
+}
+
+body,
+input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    background-color: var(--backgroundColor);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
