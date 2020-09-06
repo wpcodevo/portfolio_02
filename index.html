@@ -1,29 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- AOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
 
     <!-- StyleSheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <title>Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 
         ======================
         Header
         ======================
      -->
+    <div id="header" class="header">
+      <!-- Navigation -->
+      <div class="navigation">
+        <div class="container">
+          <nav class="nav">
+            <div class="logo">
+              <h1>JOHN</h1>
+            </div>
+
+            <div class="hamburger">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-menu"></use>
+              </svg>
+            </div>
+
+            <div class="nav__menu">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#header" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#about" class="nav__link">About Us</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#services" class="nav__link">Services</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#portfolio" class="nav__link">Porfolio</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#blog" class="nav__link">Blog</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#contact" class="nav__link">Contact</a>
+                </li>
+              </ul>
+
+              <ul class="social__menu">
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Hero -->
+    </div>
 
     <!-- 
         ======================
@@ -42,6 +117,5 @@
 
     <!-- Custom Script -->
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>
