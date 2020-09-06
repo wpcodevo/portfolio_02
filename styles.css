@@ -71,6 +71,12 @@ img {
     margin: 0 auto;
 }
 
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 90rem;
+    }
+}
+
 /* ====================
     Header
    ====================
@@ -99,32 +105,41 @@ img {
 
 
 .navigation {
-    height: 8rem;
+    padding: 1.6rem 1rem;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    height: 8rem;
+    justify-content: space-evenly;
+    width: 90vw;
+    max-width: 114rem;
+    margin: 0 auto;
 }
 
 .fix__nav {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     background-color: var(--white);
-    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-nav.fix__nav .social__menu li svg {
+.fix__nav .social__menu li svg {
     fill: var(--black2);
+    transition: all .3s ease-in-out;
 }
 
-nav.fix__nav .social__menu li {
+.fix__nav .social__menu li:hover svg {
+    fill: var(--backgroundColor);
+}
+
+.fix__nav .social__menu li {
     border-color: var(--black2);
 }
 
-nav.fix__nav .social__menu li:hover {
+.fix__nav .social__menu li:hover {
     border-color: var(--black2);
     background-color: var(--default);
 }
@@ -136,8 +151,11 @@ nav.fix__nav .social__menu li:hover {
 
 
 .nav__menu {
-    margin-left: 10%;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 70%;
 }
 
 .nav__list,
@@ -145,15 +163,13 @@ nav.fix__nav .social__menu li:hover {
     display: flex;
 }
 
-
-
 .nav__item:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: .5rem;
 }
 
 .nav__link:link,
 .nav__link:visited {
-    padding: 1.6rem;
+    padding: 1rem;
     color: var(--black2);
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -192,36 +208,49 @@ nav.fix__nav .social__menu li:hover {
    =======================
 */
 
-
-@media only screen and (max-width: 996px) {
+@media only screen and (max-width: 1200px) {
     .nav__menu {
-        margin-left: 7%;
-    }
-
-    .nav__item:not(:last-child) {
-        margin-right: .5rem;
-    }
-
-    .nav__link:link,
-    .nav__link:visited {
-        padding: 1rem;
-    }
-
-    .social__menu li {
-        border: .5px solid var(--backgroundColor);
-        padding: .5rem .8rem;
+        width: 80%;
     }
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 996px) {
     .header {
         background-image: linear-gradient(var(--backgroundColor), var(--backgroundColor))
     }
 
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+    }
+
+    .nav {
+        display: block;
+        justify-content: start;
+        align-items: flex-start;
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .nav__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .nav__menu {
-        margin-left: 0;
-        padding: 1rem;
-        background-color: var(--blue);
+        height: 0;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        flex-direction: column;
     }
 
     .logo h1 {
@@ -229,27 +258,19 @@ nav.fix__nav .social__menu li:hover {
     }
 
     .hamburger {
-        position: absolute;
-        top: 3%;
-        right: 3rem;
         padding: .3rem;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: var(--default);
         border-radius: .2rem;
+        cursor: pointer;
     }
 
     .hamburger svg {
         width: 3rem;
         height: 3rem;
         fill: var(--backgroundColor);
-    }
-
-    .nav__menu {
-        position: fixed;
-        top: 10%;
-        left: 0;
     }
 
     .nav__list {
@@ -260,6 +281,9 @@ nav.fix__nav .social__menu li:hover {
         margin-bottom: 1.6rem;
     }
 
+    .nav__item:not(:last-child) {
+        margin-right: .5rem;
+    }
 
     .nav__list .nav__item {
         width: 100%;
@@ -268,10 +292,33 @@ nav.fix__nav .social__menu li:hover {
     .nav__list .nav__link:link,
     .nav__list .nav__link:visited {
         display: block;
+        font-size: 1.4rem;
+        padding: 1rem;
+
     }
 
     .social__menu {
         padding: 0 1rem;
+    }
+
+    .social__menu li {
+        border: .5px solid var(--black2);
+        padding: .5rem .8rem;
+    }
+
+    .social__menu li svg {
+        fill: var(--black2);
+        transition: all .3s ease-in-out;
+    }
+
+
+    .social__menu li:hover {
+        border: .5px solid var(--black2);
+        background-color: var(--default);
+    }
+
+    .social__menu li:hover svg {
+        fill: var(--backgroundColor);
     }
 
     .social__menu li:not(:last-child) {
@@ -279,9 +326,9 @@ nav.fix__nav .social__menu li:hover {
     }
 
 
-
-
 }
+
+@media only screen and (max-width: 768px) {}
 
 /* =======================
     Hero
