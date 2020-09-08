@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
   <!-- AOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
@@ -19,14 +19,36 @@
 
 <body>
   <!-- 
+            ======================
+            Color Switch
+            ======================
+         -->
+  <!-- <div class="color__switch">
+    <div class="color__board">
+      <span class="default color"></span>
+      <span class="blue color"></span>
+      <span class="light-green color"></span>
+      <span class="yellow color"></span>
+      <span class="purple color"></span>
+    </div>
+    <div class="color__widget">
+      <span>
+        <svg>
+          <use xlink:href="./images/sprite.svg#icon-cog"></use>
+        </svg>
+      </span>
+    </div>
+  </div> -->
+
+  <!-- 
         ======================
         Header
         ======================
      -->
-  <div id="header" class="header">
+  <header id="header" class="header">
     <!-- Navigation -->
     <div class="navigation">
-      <nav class="nav">
+      <nav class="nav container">
         <div class="nav__header">
           <div class="logo">
             <h1>JOHN</h1>
@@ -92,33 +114,37 @@
         </div>
       </nav>
     </div>
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero__container container">
-        <div class="hero__left">
-          <div class="hero__content ">
-            <h6 class="subtitle">Looking for a Designer !</h6>
-            <h1 class="primary__title">I'm John Smithman</h1>
-            <p class="title__info">Obviously I'm a Web Designer. Web Developer with over 3 years of experience.
-              Experienced with all stages of the
-              development cycle for dynamic web projects.</p>
-            <div class="hero__btns">
-              <a href="#" class="hire">Hire me</a>
-              <a href="#" class="download">Download CV <span>
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-download"></use>
-                  </svg>
-                </span></a>
-            </div>
+  </header>
+
+  <!-- 
+        ======================
+        Main
+        ======================
+     -->
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__container container">
+      <div class="hero__center">
+        <div class="hero__content">
+          <h4>Looking for a <span id="simpleType"></span></h4>
+          <h1>I'am John Smithman</h1>
+          <p>Obviously I'm a Web Designer. Web Developer with over 3 years of experience. Experienced with all stages of
+            the
+            development cycle for dynamic web projects.</p>
+          <div class="hero__btns">
+            <a href="#" class="hire">Hire me</a>
+            <a href="#" class="download">Download CV
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-download"></use>
+                </svg>
+              </span>
+            </a>
           </div>
-        </div>
-
-        <div class="hero__right">
-
         </div>
       </div>
     </div>
-
     <div class="goto-next">
       <a href="#about">
         <span>
@@ -128,16 +154,17 @@
         </span>
       </a>
     </div>
-  </div>
-
-  <!-- 
-        ======================
-        Main
-        ======================
-     -->
+  </section>
 
   <section id="about" class="about">
-
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+      asperiores illum saepe eos, consectetur, provident autem voluptates ut
+      repellendus perferendis minus amet fugit aspernatur delectus velit modi
+      quidem labore ratione sint sit repudiandae in sapiente. Iste fuga
+      voluptatum accusamus, quidem enim dolorum dicta vitae mollitia repellat
+      earum amet atque consequuntur?
+    </p>
   </section>
 
   <!-- 
@@ -148,6 +175,10 @@
 
   <!-- AOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Type It -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
 
   <!-- Custom Script -->
   <script src="js/index.js"></script>
