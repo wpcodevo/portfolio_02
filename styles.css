@@ -16,7 +16,8 @@
   --black1: #212529;
   --black2: #3c4858;
   --grey: #8492a6;
-  --backgroundColor: #f9fafd;
+  /* --backgroundColor: #f9fafd; */
+  --backgroundColor: #eaedf2;
   --white: #fff;
 }
 
@@ -312,7 +313,6 @@ img {
     font-size: 1.4rem;
     padding: 1rem;
   }
-
 }
 
 /* 
@@ -332,12 +332,11 @@ Hero
   width: 1.6rem;
   height: 1.6rem;
   fill: var(--default);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero__container {
   height: 100%;
-
 }
 
 .hero__center {
@@ -360,8 +359,9 @@ Hero
 }
 
 .hero__content .typeit {
-  border-bottom: 1px solid var(--black2);
-  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--default);
+  color: var(--default);
+  padding-bottom: 0.5rem;
 }
 
 .hero__content p {
@@ -379,8 +379,7 @@ Hero
 
 .hero__btns .hire {
   background-color: var(--default);
-  transition: all .3s ease-in-out;
-
+  transition: all 0.3s ease-in-out;
 }
 
 .hero__btns .hire:hover {
@@ -389,7 +388,7 @@ Hero
 
 .hero__btns .download {
   color: var(--default);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero__btns .download:hover {
@@ -401,8 +400,6 @@ Hero
 .hero__btns .download:hover svg {
   fill: var(--white);
 }
-
-
 
 .goto-next {
   position: absolute;
@@ -462,26 +459,22 @@ Hero Media Query
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
-
   }
 
   .hero__content h1 {
     font-size: 4rem;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
   .hero__content {
     width: 90%;
-
   }
 
   .hero__content h1 {
     font-size: 3.5rem;
   }
 }
-
 
 /* =======================
     About section
@@ -562,7 +555,7 @@ Hero Media Query
 .right__content h4 span {
   color: var(--default);
   border-bottom: 1px solid var(--default);
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .right__content p {
@@ -570,25 +563,23 @@ Hero Media Query
   font-size: 1.5rem;
   line-height: 1.7;
   margin-bottom: 2rem;
-
 }
 
 .right__content .btn:link,
 .right__content .btn:visited {
   display: inline-block;
-  padding: .7rem 1.8rem;
+  padding: 0.7rem 1.8rem;
   font-size: 1.5rem;
   color: var(--white);
   border-radius: 1rem;
   background-color: var(--default);
-  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.3);
-  transition: all .3s ease-in-out;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
 .right__content .btn:hover {
   background-color: var(--default2);
 }
-
 
 @media only screen and (max-width: 768px) {
   .about .about__center {
@@ -630,14 +621,14 @@ Hero Media Query
 .skills__box .skills__ilt {
   width: 100%;
   position: relative;
-  height: .4rem;
+  height: 0.4rem;
   background-color: var(--grey);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .skills__box .skills__bar {
   background-color: var(--default);
-  height: .4rem;
+  height: 0.4rem;
 }
 
 .skills__box .html {
@@ -655,7 +646,6 @@ Hero Media Query
 .skills__box .nodejs {
   width: 80%;
 }
-
 
 .skills__box span {
   position: absolute;
@@ -690,9 +680,8 @@ Hero Media Query
 }
 
 .content__box span {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
-
 
 .content__box svg {
   width: 3rem;
@@ -705,6 +694,10 @@ Hero Media Query
     flex-direction: column;
   }
 
+  .content__container {
+    width: 100%;
+  }
+
   .skills__center .skills__left {
     flex: 1 1 100%;
     width: 100%;
@@ -715,8 +708,6 @@ Hero Media Query
     flex: 1 1 100%;
     margin-left: 0;
   }
-
-
 }
 
 /* =======================
@@ -724,12 +715,10 @@ Hero Media Query
    =======================
 */
 
-.portfolio {}
-
 .work__center {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 4rem 2rem;
+  gap: 4rem 3rem;
 }
 
 .work__box {
@@ -737,7 +726,7 @@ Hero Media Query
   width: 100%;
   box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
   overflow: hidden;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .work__box:hover {
@@ -761,7 +750,7 @@ Hero Media Query
   left: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .image__cover:hover::after {
@@ -769,11 +758,10 @@ Hero Media Query
   visibility: visible;
 }
 
-
 .image__cover img {
   object-fit: cover;
   height: 30rem;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .image__cover:hover img {
@@ -783,7 +771,7 @@ Hero Media Query
 .image__cover svg {
   width: 2.5rem;
   height: 2.5rem;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .image__cover span {
@@ -797,7 +785,7 @@ Hero Media Query
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 1;
   opacity: 0;
   visibility: hidden;
@@ -835,6 +823,11 @@ Hero Media Query
   color: var(--black2);
 }
 
+/* =======================
+    Latest Works Media
+   =======================
+*/
+
 @media only screen and (max-width: 768px) {
   .work__center {
     grid-template-columns: 1fr 1fr;
@@ -853,5 +846,96 @@ Hero Media Query
 
   .image__cover img {
     height: 25rem;
+  }
+}
+
+/* =======================
+     Services
+   =======================
+*/
+
+.service {
+  background-color: var(--backgroundColor);
+}
+
+.service__center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 4rem;
+}
+
+.service__box {
+  border: 2px solid var(--default);
+  border-radius: 1rem;
+  padding: 3rem 1.5rem;
+  background-color: var(--white);
+  box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.service__box:hover {
+  background-color: var(--default);
+  transform: translateY(-1rem);
+}
+
+.service__box span {
+  width: 8rem;
+  height: 8rem;
+  border: 2px dotted var(--default);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.service__box:hover span {
+  border-color: var(--white);
+}
+
+.service__box span svg {
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.service__box:hover span svg {
+  fill: var(--white);
+}
+
+.service__box h4 {
+  transition: all 0.3s ease-in-out;
+}
+
+.service__box:hover h4 {
+  color: var(--white);
+}
+
+.service__box p {
+  font-size: 1.5rem;
+  color: var(--black2);
+  transition: all 0.3s ease-in-out;
+}
+
+.service__box:hover p {
+  color: var(--backgroundColor);
+}
+
+/* =======================
+     Services Media Querys
+   =======================
+*/
+
+@media only screen and (max-width: 768px) {
+  .service__center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .service__center {
+    grid-template-columns: 1fr;
+    gap: 2rem 0rem;
   }
 }
