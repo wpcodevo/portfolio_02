@@ -359,6 +359,11 @@ Hero
   font-weight: 700;
 }
 
+.hero__content .typeit {
+  border-bottom: 1px solid var(--black2);
+  padding-bottom: .5rem;
+}
+
 .hero__content p {
   color: var(--grey);
   margin-bottom: 2rem;
@@ -405,7 +410,7 @@ Hero
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
-  animation: down 1s ease-in-out infinite;
+  animation: down 1.5s ease-in-out infinite;
 }
 
 .goto-next a span {
@@ -426,14 +431,17 @@ Hero
 @keyframes down {
   0% {
     top: 85%;
+    opacity: 0;
   }
 
   50% {
     top: 88%;
+    opacity: 1;
   }
 
   100% {
     top: 85%;
+    opacity: 0;
   }
 }
 
@@ -474,98 +482,6 @@ Hero Media Query
   }
 }
 
-@media only screen and (max-width: 568px) {}
-
-/* =======================
-    Color Switch
-   =======================
-*/
-
-.color__widget svg {
-  width: 2rem;
-  height: 2rem;
-  fill: var(--default);
-}
-
-.color__switch {
-  position: fixed;
-  top: 20%;
-  left: -7rem;
-  width: 7rem;
-  z-index: 9999;
-  background-color: var(--backgroundColor);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-}
-
-.color__board {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.color__board .color {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.color__board .color:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.color__board .default {
-  background-color: var(--default);
-}
-
-.color__board .blue {
-  background-color: var(--blue);
-}
-
-.color__board .light-green {
-  background-color: var(--lightGreen);
-}
-
-.color__board .yellow {
-  background-color: var(--yellow);
-}
-
-.color__board .purple {
-  background-color: var(--purple);
-}
-
-.color__widget {
-  position: absolute;
-  top: 0;
-  right: -3.5rem;
-  border-radius: 0 0.7rem 0.7rem 0;
-  background-color: var(--white);
-  padding: 0.5rem 0.8rem;
-}
-
-.color__widget span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.color__widget span svg {
-  animation: round 2s linear infinite;
-}
-
-@keyframes round {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /* =======================
     About section
@@ -576,4 +492,79 @@ Hero Media Query
   padding: 3rem 0;
   height: 50rem;
   position: relative;
+}
+
+.about .about__center {
+  display: flex;
+  align-items: center;
+}
+
+.about__left {
+  flex: 1 1 40%;
+}
+
+.about__right {
+  flex: 1 1 60%;
+}
+
+.img__cover {
+  border: 2rem solid var(--backgroundColor);
+  border-radius: 1rem;
+}
+
+.img__cover img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.right__content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.right__content h1 {
+  font-size: 600;
+  font-size: 2.5rem;
+  color: var(--default);
+  margin-bottom: 1.5rem;
+}
+
+.right__content h4 {
+  margin-bottom: 1.5rem;
+}
+
+.right__content h4 span {
+  color: var(--default);
+  border-bottom: 1px solid var(--default);
+  padding-bottom: .5rem;
+}
+
+.right__content p {
+  color: var(--grey);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+
+}
+
+.right__content .btn:link,
+.right__content .btn:visited {
+  display: inline-block;
+  padding: .7rem 1.8rem;
+  font-size: 1.5rem;
+  color: var(--white);
+  border-radius: 1rem;
+  background-color: var(--default);
+  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.3);
+  transition: all .3s ease-in-out;
+}
+
+.right__content .btn:hover {
+  background-color: var(--default2);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .about .about__center {
+    flex-direction: column;
+  }
 }
