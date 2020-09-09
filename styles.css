@@ -447,7 +447,6 @@ Hero
 Hero Media Query
 ==========================
 */
-
 @media only screen and (max-width: 996px) {
   .hero {
     padding-top: 8rem;
@@ -827,7 +826,6 @@ Hero Media Query
     Latest Works Media
    =======================
 */
-
 @media only screen and (max-width: 768px) {
   .work__center {
     grid-template-columns: 1fr 1fr;
@@ -837,7 +835,7 @@ Hero Media Query
 @media only screen and (max-width: 567px) {
   .work__center {
     grid-template-columns: 1fr;
-    gap: 2rem 0rem;
+    gap: 2rem 0;
   }
 
   .image__cover {
@@ -926,7 +924,6 @@ Hero Media Query
      Services Media Querys
    =======================
 */
-
 @media only screen and (max-width: 768px) {
   .service__center {
     grid-template-columns: 1fr 1fr;
@@ -936,6 +933,85 @@ Hero Media Query
 @media only screen and (max-width: 567px) {
   .service__center {
     grid-template-columns: 1fr;
+    gap: 2rem 0;
+  }
+}
+
+/* =======================
+     Blog
+   =======================
+*/
+.blog {
+  padding: 8rem 0;
+}
+
+.blog__center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+
+.blog__box {
+  width: 100%;
+  box-shadow: 0 0 3px rgba(60, 72, 88, 0.3);
+}
+
+.image__container {
+  height: 25rem;
+}
+
+.image__container img {
+  object-fit: cover;
+  height: 25rem;
+}
+
+.blog__box .content {
+  padding: 2rem 1rem;
+}
+
+.blog__box .content h4 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.blog__box .content p {
+  color: var(--black2);
+  margin-bottom: 1rem;
+}
+
+.blog__box .content a:link,
+.blog__box .content a:visited {
+  display: inline-block;
+  padding: 0.7rem 0;
+  color: var(--default);
+  border-bottom: 2px solid var(--default);
+}
+
+/* =======================
+     Blog Media Query
+   =======================
+*/
+
+@media only screen and (max-width: 768px) {
+  .blog__center {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .blog__center {
+    grid-template-columns: 1fr;
     gap: 2rem 0rem;
   }
+}
+
+/* =======================
+     Testimonials
+   =======================
+*/
+
+.testimonial {
+  background-color: var(--backgroundColor);
 }
