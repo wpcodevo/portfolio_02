@@ -30,42 +30,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Color Switch
-const root = document.documentElement;
-const colorSwitch = document.querySelector(".color__switch");
-const widget = document.querySelector(".color__widget");
-
-widget.addEventListener("click", e => {
-  const switchWidth = colorSwitch.getBoundingClientRect().left;
-  if (switchWidth < 0) {
-    colorSwitch.style.left = "0";
-  } else {
-    colorSwitch.style.left = "-7rem";
-  }
-});
-
-// function targetClick(target) {
-//   const el = document.querySelector(target);
-//   el.addEventListener("click", () => {
-//     changeColor("--default", "#e04949", "--default2", "#e61616");
-//     changeColor("--default", "#2d84fb", "--default2", "#2706df");
-//     changeColor("--default", "#67c56e", "--default2", "#08aa12");
-//     changeColor("--default", "#662e9b", "--default2", "#4c0094");
-//     changeColor("--default", "#f89d36", "--default2", "#db7807");
-//   });
-// }
-
-// targetClick(".default");
-// targetClick(".blue");
-// targetClick(".light-green");
-// targetClick(".purple");
-// targetClick(".yellow");
-
-// function changeColor(default1, default2, default3, default4) {
-//   root.style.setProperty(default1, default2);
-//   root.style.setProperty(default3, default4);
-// }
-
 // AOS
 // AOS.init();
 
@@ -82,3 +46,9 @@ new TypeIt("#simpleType", {
   .pause(500)
   .delete(9)
   .go();
+
+// Typed
+// var typed = new Typed("#simpleType", {
+//   strings: ["This is a JavaScript library", "This is an ES6 module"],
+//   smartBackspace: true, // Default value
+// });

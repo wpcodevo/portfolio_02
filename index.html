@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- StyleSheet -->
-  <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio</title>
+  </head>
 
-  <title>Portfolio</title>
-</head>
-
-<body>
-  <!-- 
+  <body>
+    <!-- 
             ======================
             Color Switch
             ======================
          -->
-  <!-- <div class="color__switch">
+    <!-- <div class="color__switch">
     <div class="color__board">
       <span class="default color"></span>
       <span class="blue color"></span>
@@ -40,148 +45,149 @@
     </div>
   </div> -->
 
-  <!-- 
+    <!-- 
         ======================
         Header
         ======================
      -->
-  <header id="header" class="header">
-    <!-- Navigation -->
-    <div class="navigation">
-      <nav class="nav container">
-        <div class="nav__header">
-          <div class="logo">
-            <h1>JOHN</h1>
+    <header id="header" class="header">
+      <!-- Navigation -->
+      <div class="navigation">
+        <nav class="nav container">
+          <div class="nav__header">
+            <div class="logo">
+              <h1>JOHN</h1>
+            </div>
+
+            <div class="hamburger">
+              <svg>
+                <use xlink:href="sprite.svg#icon-menu"></use>
+              </svg>
+            </div>
           </div>
 
-          <div class="hamburger">
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-menu"></use>
-            </svg>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#header" class="nav__link scroll-link">Home</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link scroll-link">About Us</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#services" class="nav__link scroll-link">Services</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#portfolio" class="nav__link scroll-link">Porfolio</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#blog" class="nav__link scroll-link">Blog</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link scroll-link">Contact</a>
+              </li>
+            </ul>
+
+            <ul class="social__menu">
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
+        </nav>
+      </div>
+    </header>
 
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#header" class="nav__link scroll-link">Home</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#about" class="nav__link scroll-link">About Us</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#services" class="nav__link scroll-link">Services</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#portfolio" class="nav__link scroll-link">Porfolio</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#blog" class="nav__link scroll-link">Blog</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#contact" class="nav__link scroll-link">Contact</a>
-            </li>
-          </ul>
-
-          <ul class="social__menu">
-            <li>
-              <a href="#">
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- 
+    <!-- 
         ======================
         Main
         ======================
      -->
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero__container container">
-      <div class="hero__center">
-        <div class="hero__content">
-          <h4>Looking for a <span id="simpleType"></span></h4>
-          <h1>I'am John Smithman</h1>
-          <p>Obviously I'm a Web Designer. Web Developer with over 3 years of experience. Experienced with all stages of
-            the
-            development cycle for dynamic web projects.</p>
-          <div class="hero__btns">
-            <a href="#" class="hire">Hire me</a>
-            <a href="#" class="download">Download CV
-              <span>
-                <svg>
-                  <use xlink:href="./images/sprite.svg#icon-download"></use>
-                </svg>
-              </span>
-            </a>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__center">
+          <div class="hero__content">
+            <h4>Looking for a <span id="simpleType"></span></h4>
+            <h1>I'am John Smithman</h1>
+            <p>
+              Obviously I'm a Web Designer. Web Developer with over 3 years of
+              experience. Experienced with all stages of the development cycle
+              for dynamic web projects.
+            </p>
+            <div class="hero__btns">
+              <a href="#" class="hire">Hire me</a>
+              <a href="#" class="download"
+                >Download CV
+                <span>
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-download"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="goto-next">
-      <a href="#about">
-        <span>
-          <svg>
-            <use xlink:href="./images/sprite.svg#icon-angle-down"></use>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </section>
+      <div class="goto-next">
+        <a href="#about">
+          <span>
+            <svg>
+              <use xlink:href="sprite.svg#icon-angle-down"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
 
-  <section id="about" class="about">
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
-      asperiores illum saepe eos, consectetur, provident autem voluptates ut
-      repellendus perferendis minus amet fugit aspernatur delectus velit modi
-      quidem labore ratione sint sit repudiandae in sapiente. Iste fuga
-      voluptatum accusamus, quidem enim dolorum dicta vitae mollitia repellat
-      earum amet atque consequuntur?
-    </p>
-  </section>
+    <section id="about" class="about">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+        asperiores illum saepe eos, consectetur, provident autem voluptates ut
+        repellendus perferendis minus amet fugit aspernatur delectus velit modi
+        quidem labore ratione sint sit repudiandae in sapiente. Iste fuga
+        voluptatum accusamus, quidem enim dolorum dicta vitae mollitia repellat
+        earum amet atque consequuntur?
+      </p>
+    </section>
 
-  <!-- 
+    <!-- 
         ======================
         Footer
         ======================
      -->
 
-  <!-- AOS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-  <!-- Type It -->
-  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <!-- Type It -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
 
-
-  <!-- Custom Script -->
-  <script src="js/index.js"></script>
-</body>
-
+    <!-- Custom Script -->
+    <script src="js/index.js"></script>
+  </body>
 </html>
