@@ -70,7 +70,7 @@ links.forEach(link => {
 });
 
 // AOS
-// AOS.init();
+AOS.init();
 
 // Typo
 new TypeIt("#type1", {
