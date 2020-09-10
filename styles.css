@@ -412,7 +412,7 @@ Banner Media Query
 
 @media only screen and (max-width: 1200px) {
   .header {
-    height: 70vh;
+    height: 80vh;
     background-image: linear-gradient(115deg,
         var(--backgroundColor) 0%,
         var(--backgroundColor) 57%,
@@ -425,7 +425,9 @@ Banner Media Query
 }
 
 @media only screen and (max-width: 992px) {
+
   .header {
+    height: 90vh;
     background-image: linear-gradient(115deg,
         var(--backgroundColor),
         var(--backgroundColor));
@@ -1250,4 +1252,47 @@ Go To
 
 .footer {
   background-color: var(--black1);
+  padding: 8rem 0;
+}
+
+.footer__center {
+  color: var(--backgroundColor);
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__center h2 {
+  font-size: 3.4rem;
+  margin-bottom: 2rem;
+}
+
+.footer__center p {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.social__icons {
+  display: flex;
+  align-items: center;
+
+}
+
+.social__icons a {
+  display: inline-block;
+  border: 1px solid var(--backgroundColor);
+  padding: 1rem;
+}
+
+.social__icons a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__icons svg {
+  width: 2rem;
+  height: 2rem;
 }
