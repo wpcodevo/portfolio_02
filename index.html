@@ -30,73 +30,106 @@
         ======================
      -->
   <header id="header" class="header">
-    <!-- Navigation -->
-    <div class="navigation">
-      <nav class="nav container">
-        <div class="nav__header">
-          <div class="logo">
-            <h1>JOHN</h1>
+
+    <div class="banner">
+      <!-- Navigation -->
+      <div class="navigation">
+        <nav class="nav container">
+          <div class="nav__header">
+            <div class="logo">
+              <h1>JOHN</h1>
+            </div>
+
+            <div class="hamburger">
+              <svg>
+                <use xlink:href="sprite.svg#icon-menu"></use>
+              </svg>
+            </div>
           </div>
 
-          <div class="hamburger">
-            <svg>
-              <use xlink:href="sprite.svg#icon-menu"></use>
-            </svg>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#header" class="nav__link scroll-link">Home</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#about" class="nav__link scroll-link">About Us</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#portfolio" class="nav__link scroll-link">Portfolio</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#services" class="nav__link scroll-link">Services</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#blog" class="nav__link scroll-link">Blog</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link scroll-link">Contact</a>
+              </li>
+            </ul>
+
+            <ul class="social__menu">
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container">
+        <div class="banner__content">
+          <h6 class="subtitle">Looking for a <span id="type1"></span></h6>
+          <h1 class="primary__title">I'm John Smithman</h1>
+          <p class="title__info">
+            Obviously I'm a Web Designer. Web Developer with over 3 years of
+            experience. Experienced with all stages of the development cycle
+            for dynamic web projects.
+          </p>
+          <div class="banner__btns">
+            <a href="#" class="hire">Hire me</a>
+            <a href="#" class="download">Download CV
+              <span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-download"></use>
+                </svg> </span></a>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#header" class="nav__link scroll-link">Home</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#about" class="nav__link scroll-link">About Us</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#portfolio" class="nav__link scroll-link">Portfolio</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#services" class="nav__link scroll-link">Services</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#blog" class="nav__link scroll-link">Blog</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#contact" class="nav__link scroll-link">Contact</a>
-            </li>
-          </ul>
-
-          <ul class="social__menu">
-            <li>
-              <a href="#">
-                <svg>
-                  <use xlink:href="sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg>
-                  <use xlink:href="sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg>
-                  <use xlink:href="sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <div class="goto-next">
+      <a href="#">
+        <span>
+          <svg>
+            <use xlink:href="./images/sprite.svg#icon-angle-down"></use>
+          </svg>
+        </span>
+      </a>
     </div>
   </header>
 
@@ -105,46 +138,6 @@
         Main
         ======================
      -->
-
-  <!-- 
-       ======================
-       Hero
-       ======================
-        -->
-  <section class="hero">
-    <div class="hero__container container">
-      <div class="hero__center">
-        <div class="hero__content">
-          <h4>Looking for a <span class="typeit" id="type1"></span></h4>
-          <h1>I'am John Smithman</h1>
-          <p>
-            Obviously I'm a Web Designer. Web Developer with over 3 years of
-            experience. Experienced with all stages of the development cycle
-            for dynamic web projects.
-          </p>
-          <div class="hero__btns">
-            <a href="#" class="hire">Hire me</a>
-            <a href="#" class="download">Download CV
-              <span>
-                <svg>
-                  <use xlink:href="sprite.svg#icon-download"></use>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="goto-next">
-      <a href="#about">
-        <span>
-          <svg>
-            <use xlink:href="sprite.svg#icon-angle-down"></use>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </section>
 
   <!-- 
     ======================
@@ -598,7 +591,7 @@
             <li class="glide__slide">
               <div class="testimonial__box">
                 <div class="client__image">
-                  <img src="" alt="">
+                  <img src="./images/test1.jpg" alt="">
                 </div>
                 <div class="client__content">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente adipisci illum minus ipsa
@@ -611,7 +604,7 @@
             <li class="glide__slide">
               <div class="testimonial__box">
                 <div class="client__image">
-                  <img src="" alt="">
+                  <img src="./images/test2.jpg" alt="">
                 </div>
                 <div class="client__content">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente adipisci illum minus ipsa
@@ -624,7 +617,21 @@
             <li class="glide__slide">
               <div class="testimonial__box">
                 <div class="client__image">
-                  <img src="" alt="">
+                  <img src="./images/test1.jpg" alt="">
+                </div>
+                <div class="client__content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente adipisci illum minus ipsa
+                    dignissimos, alias vitae dolorem debitis harum?</p>
+                  <h3>Brain Smith</h3>
+                  <span>Co-founder</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="testimonial__box">
+                <div class="client__image">
+                  <img src="./images/test2.jpg" alt="">
                 </div>
                 <div class="client__content">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente adipisci illum minus ipsa

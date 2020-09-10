@@ -72,5 +72,10 @@ if (slider1) {
     perView: 2,
     animationDuration: 800,
     animationTimingFunc: "linear",
+    breakpoints: {
+      996: {
+        perView: 1,
+      },
+    },
   }).mount();
 }

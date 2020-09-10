@@ -102,6 +102,13 @@ img {
 
 .header {
   position: relative;
+  height: calc(100vh + 8rem);
+  background-image: linear-gradient(
+    115deg,
+    var(--backgroundColor) 0%,
+    var(--backgroundColor) 57%,
+    var(--default) 57%
+  );
 }
 
 /* ====================
@@ -123,7 +130,6 @@ img {
   padding: 1.6rem 1rem;
   position: relative;
   z-index: 1999;
-  background-color: var(--backgroundColor);
 }
 
 .nav {
@@ -151,17 +157,17 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-.fix__nav .social__menu li:hover svg {
-  fill: var(--backgroundColor);
-}
-
 .fix__nav .social__menu li {
   border-color: var(--black2);
 }
 
 .fix__nav .social__menu li:hover {
-  border-color: var(--black2);
+  border-color: var(--default);
   background-color: var(--default);
+}
+
+.fix__nav .social__menu li:hover svg {
+  fill: var(--backgroundColor);
 }
 
 .logo {
@@ -205,7 +211,7 @@ img {
 }
 
 .social__menu li {
-  border: 0.7px solid var(--black2);
+  border: 0.7px solid var(--backgroundColor);
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -213,12 +219,11 @@ img {
 }
 
 .social__menu li:hover {
-  background-color: var(--default);
+  border-color: var(--default);
 }
 
-.social__menu li:hover svg {
+.social__menu li svg {
   fill: var(--backgroundColor);
-  transition: all 0.3s ease-in-out;
 }
 
 .social__menu li a {
@@ -317,89 +322,161 @@ img {
 
 /* 
 ==========================
-Hero
+Banner
 ==========================
 */
 
-.hero {
-  position: relative;
+.banner {
   width: 100%;
-  height: 100vh;
-  background-color: var(--backgroundColor);
+  height: 100%;
+  background-image: url("./images/profile4.png");
+  background-position: right bottom;
+  background-size: 500px;
+  background-repeat: no-repeat;
 }
 
-.hero__btns svg {
+.banner__content {
+  position: absolute;
+  top: 40%;
+  left: 7%;
+  width: 50%;
+}
+
+.banner__content .subtitle {
+  font-size: 1.6rem;
+}
+
+.banner__content .subtitle span {
+  color: var(--default);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--yellow);
+}
+
+.banner__content .primary__title {
+  font-size: 5rem;
+  color: var(--default);
+  font-weight: 700;
+}
+
+.banner__content .title__info {
+  color: var(--grey);
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.banner__content .banner__btns svg {
   width: 1.6rem;
   height: 1.6rem;
   fill: var(--default);
   transition: all 0.3s ease-in-out;
 }
 
-.hero__container {
-  height: 100%;
+.banner__content .download:hover svg {
+  fill: var(--white);
 }
 
-.hero__center {
-  height: 100%;
-  text-align: center;
-}
-
-.hero__content {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-}
-
-.hero__content h1 {
-  font-size: 5rem;
-  color: var(--default);
-  font-weight: 700;
-}
-
-.hero__content .typeit {
-  border-bottom: 1px solid var(--default);
-  color: var(--default);
-  padding-bottom: 0.5rem;
-}
-
-.hero__content p {
-  color: var(--grey);
-  margin-bottom: 2rem;
-}
-
-.hero__btns a {
+.banner__content .banner__btns a {
   display: inline-block;
   padding: 1rem 2rem;
-  color: var(--white);
   border-radius: 1rem;
   border: 1px solid var(--default);
 }
 
-.hero__btns .hire {
+.banner__btns .hire:link,
+.banner__btns .hire:visited {
   background-color: var(--default);
   transition: all 0.3s ease-in-out;
+  color: var(--white);
 }
 
-.hero__btns .hire:hover {
+.banner__btns .hire:hover {
   background-color: var(--default2);
 }
 
-.hero__btns .download {
+.banner__btns .download:link,
+.banner__btns .download:visited {
   color: var(--default);
   transition: all 0.3s ease-in-out;
 }
 
-.hero__btns .download:hover {
+.banner__btns .download:hover {
   border: 1px solid var(--default);
   background-color: var(--default);
   color: var(--white);
 }
 
-.hero__btns .download:hover svg {
-  fill: var(--white);
+/* 
+==========================
+Banner Media Query
+==========================
+*/
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    height: 70vh;
+    background-image: linear-gradient(
+      115deg,
+      var(--backgroundColor) 0%,
+      var(--backgroundColor) 57%,
+      var(--default) 57%
+    );
+  }
+
+  .banner {
+    background-size: 400px;
+  }
 }
+
+@media only screen and (max-width: 992px) {
+  .header {
+    background-image: linear-gradient(
+      115deg,
+      var(--backgroundColor),
+      var(--backgroundColor)
+    );
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner {
+    background-size: 350px;
+  }
+
+  .banner__content {
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .header {
+    height: calc(100vh + 8rem);
+  }
+
+  .banner__content {
+    top: 15%;
+    left: 8%;
+    width: 90%;
+  }
+
+  .banner {
+    background-size: 200px;
+    background-position: center bottom;
+  }
+
+  .banner__content .primary__title {
+    font-size: 4rem;
+  }
+
+  .banner__content .title__info {
+    margin-bottom: 1rem;
+  }
+}
+
+/* 
+==========================
+Go To
+==========================
+*/
 
 .goto-next {
   position: absolute;
@@ -411,7 +488,7 @@ Hero
 }
 
 .goto-next a span {
-  background-color: var(--default);
+  background-color: var(--backgroundColor);
   padding: 1rem 0.5rem;
   border-radius: 50%;
   display: flex;
@@ -422,7 +499,7 @@ Hero
 .goto-next svg {
   width: 1.8rem;
   height: 1.8rem;
-  fill: var(--backgroundColor);
+  fill: var(--default);
 }
 
 @keyframes down {
@@ -439,39 +516,6 @@ Hero
   100% {
     top: 85%;
     opacity: 0;
-  }
-}
-
-/* 
-==========================
-Hero Media Query
-==========================
-*/
-@media only screen and (max-width: 996px) {
-  .hero {
-    padding-top: 8rem;
-  }
-
-  .hero__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-  }
-
-  .hero__content h1 {
-    font-size: 4rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .hero__content {
-    width: 90%;
-  }
-
-  .hero__content h1 {
-    font-size: 3.5rem;
   }
 }
 
@@ -687,6 +731,11 @@ Hero Media Query
   height: 3rem;
   fill: var(--default);
 }
+
+/* =======================
+    Skills Media Query
+   =======================
+*/
 
 @media only screen and (max-width: 768px) {
   .skills__center {
@@ -921,7 +970,7 @@ Hero Media Query
 }
 
 /* =======================
-     Services Media Querys
+     Services Media Query
    =======================
 */
 @media only screen and (max-width: 768px) {
@@ -1014,4 +1063,67 @@ Hero Media Query
 
 .testimonial {
   background-color: var(--backgroundColor);
+  padding: 6rem 0 10rem 0;
+}
+
+.testimonial__box {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--white);
+  padding: 2rem 1.5rem;
+  border: 1px solid #edd;
+  box-shadow: 0 0 3px rgba(207, 50, 11, 0.3);
+}
+
+.client__image {
+  width: 40rem;
+  padding-right: 1rem;
+}
+
+.client__image img {
+  object-fit: cover;
+  border-radius: 50% 0 50% 50%;
+  width: 30rem;
+  height: 13rem;
+}
+
+.client__content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.client__content p {
+  color: var(--black2);
+  margin-bottom: 1rem;
+}
+
+.client__content span {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 567px) {
+  .client__image {
+    width: 30rem;
+    padding-right: 1rem;
+  }
+
+  .client__image img {
+    object-fit: cover;
+    border-radius: 50% 0 50% 50%;
+    width: 20rem;
+    height: 8rem;
+  }
+
+  .client__content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .client__content p {
+    font-size: 1.4rem;
+  }
+
+  .client__content span {
+    font-size: 1.4rem;
+  }
 }
