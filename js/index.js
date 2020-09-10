@@ -20,6 +20,7 @@ navOpen.addEventListener("click", () => {
 
 // Fix Navbar
 const navBar = document.querySelector(".navigation");
+const topLink = document.querySelector(".goto-top");
 window.addEventListener("scroll", () => {
   const navHeight = navBar.getBoundingClientRect().height;
   const scrollHeight = window.pageYOffset;
@@ -28,6 +29,45 @@ window.addEventListener("scroll", () => {
   } else {
     navBar.classList.remove("fix__nav");
   }
+
+  if (scrollHeight > 500) {
+    topLink.classList.add("show");
+  } else {
+    topLink.classList.remove("show");
+  }
+});
+
+// Smooth Scroll
+const links = document.querySelectorAll(".scroll-link");
+const linksContainer = document.querySelector(".nav__list");
+
+links.forEach(link => {
+  link.addEventListener("click", e => {
+    // Prevent Default
+    e.preventDefault();
+    // Scroll to a specific spot
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    const el = document.getElementById(id);
+
+    const navHeight = navBar.getBoundingClientRect().height;
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    console.log(containerHeight);
+    const fixNav = navBar.classList.contains("fix__nav");
+    let position = el.offsetTop - containerHeight;
+
+    if (!fixNav) {
+      position = position - navHeight;
+    } else if (navHeight > 82) {
+      position = position + containerHeight;
+    }
+
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+
+    navContainer.style.height = "0";
+  });
 });
 
 // AOS
