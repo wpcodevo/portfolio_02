@@ -349,7 +349,7 @@ Banner
 .banner__content .subtitle span {
   color: var(--default);
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--default);
 }
 
 .banner__content .primary__title {
