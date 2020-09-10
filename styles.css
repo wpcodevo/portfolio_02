@@ -40,7 +40,8 @@ html {
 }
 
 body,
-input {
+input,
+textarea {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
@@ -103,12 +104,10 @@ img {
 .header {
   position: relative;
   height: calc(100vh + 8rem);
-  background-image: linear-gradient(
-    115deg,
-    var(--backgroundColor) 0%,
-    var(--backgroundColor) 57%,
-    var(--default) 57%
-  );
+  background-image: linear-gradient(115deg,
+      var(--backgroundColor) 0%,
+      var(--backgroundColor) 57%,
+      var(--default) 57%);
 }
 
 /* ====================
@@ -414,12 +413,10 @@ Banner Media Query
 @media only screen and (max-width: 1200px) {
   .header {
     height: 70vh;
-    background-image: linear-gradient(
-      115deg,
-      var(--backgroundColor) 0%,
-      var(--backgroundColor) 57%,
-      var(--default) 57%
-    );
+    background-image: linear-gradient(115deg,
+        var(--backgroundColor) 0%,
+        var(--backgroundColor) 57%,
+        var(--default) 57%);
   }
 
   .banner {
@@ -429,11 +426,9 @@ Banner Media Query
 
 @media only screen and (max-width: 992px) {
   .header {
-    background-image: linear-gradient(
-      115deg,
-      var(--backgroundColor),
-      var(--backgroundColor)
-    );
+    background-image: linear-gradient(115deg,
+        var(--backgroundColor),
+        var(--backgroundColor));
   }
 }
 
@@ -1101,6 +1096,12 @@ Go To
   font-size: 1.5rem;
 }
 
+/* =======================
+     Testimonials Media
+   =======================
+*/
+
+
 @media only screen and (max-width: 567px) {
   .client__image {
     width: 30rem;
@@ -1126,4 +1127,127 @@ Go To
   .client__content span {
     font-size: 1.4rem;
   }
+}
+
+
+/* =======================
+     Contact
+   =======================
+*/
+
+
+.contact__center {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem 0;
+}
+
+.contact__top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0rem 2rem;
+
+}
+
+.contact__top .contact__box {
+  text-align: center;
+  border: 1px solid #edd;
+  padding: 1.5rem;
+  box-shadow: 0 0 3px rgba(207, 50, 11, 0.3);
+}
+
+
+.contact__top .contact__box svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.contact__top .contact__box h2 {
+  font-size: 2rem;
+}
+
+.contact__top .contact__box p {
+  color: var(--black2);
+  margin-bottom: 1rem;
+}
+
+.contact__top .contact__box a:link,
+.contact__top .contact__box a:visited {
+  display: inline-block;
+  color: var(--default);
+}
+
+
+/* Contact Bottom */
+
+.contact__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+}
+
+.bottom__left form {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom__left form input {
+  padding: 1rem 0;
+  border: 1px solid #edd;
+  text-indent: 1rem;
+  border-radius: 1rem;
+}
+
+.bottom__left form input:focus {
+  outline: none;
+}
+
+.bottom__left form input:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.bottom__right textarea {
+  border: 1px solid #edd;
+  text-indent: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.bottom__right textarea:focus {
+  outline: none;
+}
+
+/* =======================
+     Contact Media Query
+   =======================
+*/
+
+@media only screen and (max-width: 768px) {
+  .contact__top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .contact__top {
+    grid-template-columns: 1fr;
+    gap: 2rem 0;
+  }
+
+
+  .contact__bottom {
+    grid-template-columns: 1fr;
+    gap: 2rem 0;
+  }
+}
+
+
+/* =======================
+     Footer
+   =======================
+*/
+
+.footer {
+  background-color: var(--black1);
 }
