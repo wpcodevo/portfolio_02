@@ -54,9 +54,7 @@ links.forEach(link => {
     const fixNav = navBar.classList.contains("fix__nav");
     let position = el.offsetTop - navHeight;
 
-    if (!fixNav) {
-      position = position - navHeight;
-    } else if (navHeight > 82) {
+    if (navHeight > 82) {
       position = position + containerHeight;
     }
 
